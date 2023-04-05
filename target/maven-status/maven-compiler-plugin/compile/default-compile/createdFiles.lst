@@ -1,0 +1,5 @@
+com/spring/quickstarts/controllers/HomeController.class
+com/spring/quickstarts/config/WebConfig.class
+com/spring/quickstarts/config/SpittrWebAppInitializer.class
+com/spring/quickstarts/controllers/GreetController.class
+com/spring/quickstarts/config/RootConfig.class
