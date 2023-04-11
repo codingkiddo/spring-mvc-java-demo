@@ -1,16 +1,22 @@
-create table Spittle (
-	id identity,
-	message varchar(140) not null,
-	created_at timestamp not null,
-	latitude double,
-	longitude double
+drop table if exists spittle;
+drop table if exists spitter;
+
+create table spitter (
+  id INT not null,
+  username varchar(25) not null,
+  password varchar(25) not null,
+  fullName varchar(100) not null,
+  email varchar(50) not null,
+  updateByEmail boolean not null, 
+    status varchar(50) not null,
+    PRIMARY KEY (id)
 );
 
-create table Spitter (
-	id identity,
-	username varchar(20) unique not null,
-	password varchar(20) not null,
-	first_name varchar(30) not null,
-	last_name varchar(30) not null,
-	email varchar(30) not null
+create table spittle (
+  id INT not null,
+  spitter integer not null,
+  message varchar(2000) not null,
+  postedTime DATE not null,
+  foreign key (spitter) references spitter(id)
 );
+
