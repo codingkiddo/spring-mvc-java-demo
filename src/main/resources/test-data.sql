@@ -1,4 +1,4 @@
-insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (1, 'habuma', 'password', 'Craig Walls', 'craig@habuma.com', false, 'Newbie');
+insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (1, 'admin', 'password', 'Craig Walls', 'craig@habuma.com', false, 'Newbie');
 insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (2, 'mwalls', 'password', 'Michael Walls', 'mwalls@habuma.com', true, 'Newbie');
 insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (3, 'chuck', 'password', 'Chuck Wagon', 'chuck@habuma.com', false, 'Newbie');
 insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (4, 'artnames', 'password', 'Art Names', 'art@habuma.com', true, 'Newbie');
