@@ -24,7 +24,7 @@ public class SpringDataJpaConfig {
 	private Properties jpaProperties() {
 		Properties properties = new Properties();
 		properties.setProperty("hibernate.hbm2ddl.auto", "update");
-		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL8Dialect");
+		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 		return properties;
 	}
 	@Bean
@@ -58,7 +58,7 @@ public class SpringDataJpaConfig {
 		dataSource.setUrl("jdbc:mysql://localhost:3306/employees?allowPublicKeyRetrieval=true&useSSL=false");
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		dataSource.setUsername("root");
-		dataSource.setPassword("!DS03ec123");
+		dataSource.setPassword("12345678");
 		return dataSource;
 	}
 	
