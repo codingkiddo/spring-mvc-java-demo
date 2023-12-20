@@ -3,6 +3,8 @@ package com.spring.quickstarts.controllers;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,28 +34,23 @@ public class SpittleController {
 //		return spittleRepository.findSpittles(max, count);
 //	}
 
-	@RequestMapping(value = "/{spittleId}", method = RequestMethod.GET)
-	public String spittle(@PathVariable("spittleId") long spittleId, Model model) {
-		Spittle spittle = spittleRepository.findById(spittleId).get();
+	@RequestMapping(value = "/{spittleId}", method = RequestMethod.GET, produces = {"application/json"})
+	public ResponseEntity<Spittle> spittle(@PathVariable("spittleId") long spittleId)  throws SpittleNotFoundException {
+		Spittle spittle = spittleRepository.findById(spittleId).orElse(null);
 		if (spittle == null) {
 			throw new SpittleNotFoundException();
 		}
-		model.addAttribute(spittle);
-		return "spittle";
+		return new ResponseEntity<Spittle>(spittle, HttpStatus.OK);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public String saveSpittle(SpittleForm form, Model model) {
-		try {
-			spittleRepository.save(new Spittle(null, form.getMessage(), new Date()));
-			return "redirect:/spittles";
-		} catch (Exception e) {
-			return "error/duplicate";
-		}
+		spittleRepository.save(new Spittle(null, form.getMessage(), new Date()));
+		return "redirect:/spittles";
 	}
 
-	@ExceptionHandler(Exception.class)
-	public String handleNotFound() {
+	@ExceptionHandler(DuplicateSpittleException.class)
+	public String handleDuplicateSpittle() {
 		return "error/duplicate";
 	}
 
