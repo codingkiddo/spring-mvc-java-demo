@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.quickstarts.model.Employee;
 import com.spring.quickstarts.model.EmployeeDTO;
-import com.spring.quickstarts.model.EmployeeEMF;
 import com.spring.quickstarts.services.EmployeeService;
 
 @RestController

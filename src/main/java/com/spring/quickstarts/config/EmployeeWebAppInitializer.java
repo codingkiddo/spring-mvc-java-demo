@@ -2,7 +2,7 @@ package com.spring.quickstarts.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+class EmployeeWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 	@Override
 	protected String[] getServletMappings() {
 		return new String[] { "/" };

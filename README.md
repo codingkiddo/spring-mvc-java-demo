@@ -1,2 +1,9 @@
 # spring-mvc-java-demo
-# spring-mvc-java-demo
+
+
+[class com.baeldung.spring.configuration.SecureWebContextDispatcherServletInitializer, class com.baeldung.spring.configuration.EmployeeAppRootContextLoaderInitializer, class com.baeldung.spring.configuration.NormalWebContextDispatcherServletInitializer, class org.springframework.web.servlet.support.AbstractDispatcherServletInitializer, class org.springframework.web.server.adapter.AbstractReactiveWebInitializer, class org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer, class org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer, class org.springframework.web.context.AbstractContextLoaderInitializer]
+
+[com.baeldung.spring.configuration.SecureWebContextDispatcherServletInitializer@62cd1577, com.baeldung.spring.configuration.EmployeeAppRootContextLoaderInitializer@7ee24eb3, com.baeldung.spring.configuration.NormalWebContextDispatcherServletInitializer@6377be4d]
+
+
+[class org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer, class com.spring.quickstarts.config.SecurityWebInitializer, class org.springframework.web.server.adapter.AbstractReactiveWebInitializer, class org.springframework.web.servlet.support.AbstractDispatcherServletInitializer, class org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer, class org.springframework.web.context.AbstractContextLoaderInitializer, class com.spring.quickstarts.config.SpittrWebAppInitializer]

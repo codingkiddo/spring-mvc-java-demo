@@ -1,15 +1,22 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
+
 <html>
   <head>
     <title>Spitter</title>
-    <link rel="stylesheet" 
-          type="text/css" 
-          href="<c:url value="/resources/style.css" />" >
+    <link href="<s:url value="/resources" />/css/spitter.css" 
+          rel="stylesheet" 
+          type="text/css" />
   </head>
-  <body>
-    <h1>Welcome to Spitter</h1>
 
-   
+  <body>
+    <div id="container">
+      <a href="<s:url value="/home" />"><img 
+          src="<s:url value="/resources" />/images/spitter_logo_50.png" 
+          border="0"/></a>
+      
+        
+        
+        <h1>Home JSP</h1>
+    </div>
   </body>
 </html>
