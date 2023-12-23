@@ -1,101 +1,112 @@
 package com.spring.quickstarts.model;
 
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
-@Entity
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.hibernate.validator.constraints.Email;
+
 public class Spitter {
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "username")
+	@NotNull
+	@Size(min = 5, max = 16, message = "{username.size}")
 	private String username;
 
-	@Column(name = "password")
+	@NotNull
+	@Size(min = 5, max = 25, message = "{password.size}")
 	private String password;
 
-	@Column(name = "fullname")
-	private String fullName;
+	@NotNull
+	@Size(min = 2, max = 30, message = "{firstName.size}")
+	private String firstName;
 
-	@Column(name = "email")
+	@NotNull
+	@Size(min = 2, max = 30, message = "{lastName.size}")
+	private String lastName;
+
+	@NotNull
+	@Email
 	private String email;
 
-	@Column(name = "updateByEmail")
-	private boolean updateByEmail;
-
-	@Column(name = "status")
-	private String status;
-
-	@OneToMany(targetEntity = Spittle.class, fetch = FetchType.EAGER, mappedBy = "spitter")
-	private List<Spittle> spittles;
-
-	public Spitter(Long id, String username, String password, String fullName, String email, boolean updateByEmail) {
-		this.id = id;
-		this.username = username;
-		this.password = password;
-		this.fullName = fullName;
-		this.email = email;
-		this.updateByEmail = updateByEmail;
-		this.status = "Newbie";
-	}
-
-	public Spitter(String username, String password, String fullName, String email, boolean updateByEmail) {
-		this.username = username;
-		this.password = password;
-		this.fullName = fullName;
-		this.email = email;
-		this.updateByEmail = updateByEmail;
-		this.status = "Newbie";
-	}
-	public Spitter(String username, String password, String fullName, String email, String status) {
-		this.username = username;
-		this.password = password;
-		this.fullName = fullName;
-		this.email = email;
-		this.updateByEmail = true;
-		this.status = status;
-	}
 	public Spitter() {
 	}
 
-	public Long getId() {
-		return id;
+	public Spitter(String username, String password, String firstName, String lastName, String email) {
+		this(null, username, password, firstName, lastName, email);
+	}
+
+	public Spitter(Long id, String username, String password, String firstName, String lastName, String email) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
 	}
 
 	public String getUsername() {
 		return username;
 	}
 
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	public String getPassword() {
 		return password;
 	}
 
-	public String getFullName() {
-		return fullName;
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public boolean isUpdateByEmail() {
-		return updateByEmail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getStatus() {
-		return status;
+	@Override
+	public boolean equals(Object that) {
+		return EqualsBuilder.reflectionEquals(this, that, "firstName", "lastName", "username", "password", "email");
 	}
 
-	public List<Spittle> getSpittles() {
-		return spittles;
+	@Override
+	public int hashCode() {
+		return HashCodeBuilder.reflectionHashCode(this, "firstName", "lastName", "username", "password", "email");
 	}
+
 }

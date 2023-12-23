@@ -17,6 +17,4 @@ class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherServletI
 	protected Class<?>[] getServletConfigClasses() {
 		return new Class<?>[] { WebConfig.class };
 	}
-	
-	
 }
