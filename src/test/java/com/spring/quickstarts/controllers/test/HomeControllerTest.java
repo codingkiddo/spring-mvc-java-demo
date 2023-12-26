@@ -10,7 +10,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.spring.quickstarts.controllers.HomeController;
 
-public class HomeControllertest {
+public class HomeControllerTest {
 
 	@Test
 	public void test_home_page() throws Exception {
