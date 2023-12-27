@@ -3,6 +3,7 @@ package com.spring.quickstarts.dao.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -13,11 +14,11 @@ import com.spring.quickstarts.model.Employee;
 public class EmployeeDaoImpl implements EmployeeDao {
  
 	@Autowired
-	private JdbcTemplate jdbcTemplate;
+	private JdbcOperations jdbcOperations;
 	
 	
     public Employee findById(int id) {
-    	Employee employee = jdbcTemplate.queryForObject("select * from employees where emp_no=?", new Object[] {id}, new EmployeeMapper());
+    	Employee employee = jdbcOperations.queryForObject("select * from employees where emp_no=?", new Object[] {id}, new EmployeeMapper());
         return employee;
     }
  

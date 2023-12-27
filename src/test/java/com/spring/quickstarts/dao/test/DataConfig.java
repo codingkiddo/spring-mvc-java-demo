@@ -1,4 +1,4 @@
-package com.spring.quickstarts.config;
+package com.spring.quickstarts.dao.test;
 
 import javax.sql.DataSource;
 
