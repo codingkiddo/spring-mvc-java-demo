@@ -24,13 +24,25 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
  
     @Transactional(propagation = Propagation.REQUIRED)
-    public void saveEmployee(Employee employee) {
-        dao.saveEmployee(employee);
+    public Employee saveEmployee(Employee employee) {
+        return dao.saveEmployee(employee);
     }
  
     @Transactional(readOnly = true)
     public List<Employee> findAllEmployees() {
         return dao.findAllEmployees();
     }
+
+	@Override
+	public long count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Employee findByFirstName(String firstName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
  
 }

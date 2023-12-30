@@ -9,8 +9,12 @@ public interface EmployeeService {
  
     Employee findById(int id);
      
-    void saveEmployee(Employee employee);
+    Employee saveEmployee(Employee employee);
      
     List<Employee> findAllEmployees(); 
      
+    long count();
+
+	Employee findByFirstName(String firstName);
+
 }

@@ -9,7 +9,6 @@ public class ConfigureWebaAplicationInitializer implements WebApplicationInitial
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
-
 		servletContext.setInitParameter("spring.profiles.active", "production");
 		
 	} 

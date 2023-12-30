@@ -1,7 +1,5 @@
 package com.spring.quickstarts.controllers;
 
-import java.util.List;
-
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +18,8 @@ public class EmployeeController {
 	@Autowired
     private EmployeeService service;
 	
-	@Autowired
-	private DataSource dataSource;
+//	@Autowired
+//	private DataSource dataSource;
 	 /*
      * This method will return employee by id.
      */
@@ -31,8 +29,8 @@ public class EmployeeController {
         return employee;
     }
 	
-    @RequestMapping(value = { "/profile" }, method = RequestMethod.GET)
-    public DataSource getProfileType() {
-        return dataSource;
-    }
+//    @RequestMapping(value = { "/profile" }, method = RequestMethod.GET)
+//    public DataSource getProfileType() {
+//        return dataSource;
+//    }
 }

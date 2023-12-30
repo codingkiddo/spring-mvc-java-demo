@@ -23,7 +23,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
  
 //    @Transactional(propagation = Propagation.REQUIRED)
-    public void saveEmployee(Employee employee) {
+    public Employee saveEmployee(Employee employee) {
+    	return null;
     }
  
     @SuppressWarnings("unchecked")

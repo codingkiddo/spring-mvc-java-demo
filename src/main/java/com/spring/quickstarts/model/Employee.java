@@ -46,6 +46,22 @@ public class Employee {
     @Sex
     private Character gender;
 
+    
+    
+	public Employee(int emp_no, @NotNull Date birth_date, String first_name, String last_name, @NotNull Date hire_date,
+			@NotNull Character gender) {
+		super();
+		this.emp_no = emp_no;
+		this.birth_date = birth_date;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.hire_date = hire_date;
+		this.gender = gender;
+	}
+
+	public Employee() {
+	}
+
 	public int getEmp_no() {
 		return emp_no;
 	}

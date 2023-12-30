@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.spring.quickstarts</groupId>
 	<artifactId>spring-mvc-java-demo</artifactId>
@@ -14,7 +16,8 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Define the version of the Spring Framework we want to import. Any 
+			<!-- Define the version of the Spring Framework we want to import.
+			Any 
 				dependencies from org.springframework.* will have their version defined by 
 				this BOM -->
 			<dependency>
@@ -61,21 +64,24 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
 			<version>5.6.2</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
 			<version>5.6.2</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
@@ -90,13 +96,13 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 		</dependency>
-<!-- H2 -->
-  <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-      <version>1.3.165</version>
-     </dependency>
-    
+		<!-- H2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.3.165</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -141,20 +147,35 @@
 			<version>2.0.1.Final</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.9.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 <dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>5.2.9.Final</version>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
+    <scope>provided</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+<dependency>
+    <groupId>javax.inject</groupId>
+    <artifactId>javax.inject</artifactId>
+    <version>1</version>
 </dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-validator</artifactId>
-    <version>5.4.0.Final</version>
-</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.4.0.Final</version>
+		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+		<!--
+		https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
