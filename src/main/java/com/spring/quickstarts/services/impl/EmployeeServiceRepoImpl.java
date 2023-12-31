@@ -2,6 +2,8 @@ package com.spring.quickstarts.services.impl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +11,8 @@ import com.spring.quickstarts.model.Employee;
 import com.spring.quickstarts.repository.EmployeeRepository;
 import com.spring.quickstarts.services.EmployeeService;
 
-@Service
+@Service("EmployeeServiceRepoImpl")
+@Transactional
 public class EmployeeServiceRepoImpl implements EmployeeService {
 
 	@Autowired

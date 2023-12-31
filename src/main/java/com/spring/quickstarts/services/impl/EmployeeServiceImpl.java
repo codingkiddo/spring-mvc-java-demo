@@ -11,7 +11,7 @@ import com.spring.quickstarts.dao.EmployeeDao;
 import com.spring.quickstarts.model.Employee;
 import com.spring.quickstarts.services.EmployeeService;
  
-@Service
+@Service("EmployeeServiceImpl")
 //@Transactional
 public class EmployeeServiceImpl implements EmployeeService {
  

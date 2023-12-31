@@ -6,14 +6,20 @@ import java.util.List;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import com.spring.quickstarts.model.Employee;
 import com.spring.quickstarts.repository.EmployeeRepository;
 
+@Repository
 public class EmployeeRepositoryImpl implements EmployeeRepository {
 
 	@Autowired
 	private SessionFactory sessionFactory;
+	
+	@Autowired 
+	private PlatformTransactionManager transactionManager;
 	
 	@Override
 	public long count() {
