@@ -10,10 +10,10 @@ import org.springframework.stereotype.Repository;
 import com.spring.quickstarts.dao.EmployeeDao;
 import com.spring.quickstarts.model.Employee;
 
-@Repository
+//@Repository
 public class EmployeeDaoImpl implements EmployeeDao {
  
-	@Autowired
+//	@Autowired
 	private JdbcOperations jdbcOperations;
 	
 	

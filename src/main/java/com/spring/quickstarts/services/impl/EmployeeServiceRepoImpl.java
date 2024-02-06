@@ -15,7 +15,7 @@ import com.spring.quickstarts.services.EmployeeService;
 @Transactional
 public class EmployeeServiceRepoImpl implements EmployeeService {
 
-	@Autowired
+//	@Autowired
 	private EmployeeRepository employeeRepository;
 	
 	@Override

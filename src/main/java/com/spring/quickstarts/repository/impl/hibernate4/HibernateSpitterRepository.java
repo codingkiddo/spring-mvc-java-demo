@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import com.spring.quickstarts.model.Spitter;
 import com.spring.quickstarts.repository.SpitterRepository;
 
-@Repository
+//@Repository
 public class HibernateSpitterRepository implements SpitterRepository {
 
 	private SessionFactory sessionFactory;

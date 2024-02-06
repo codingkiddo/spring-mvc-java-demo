@@ -40,7 +40,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
 	@Override
 	public Employee findEmployee(int id) {
-		return (Employee) sessionFactory.getCurrentSession().get(Employee.class, id);
+		return (Employee) sessionFactory.getCurrentSession().get(Employee.class, 0.0);
 	}
 
 	@Override

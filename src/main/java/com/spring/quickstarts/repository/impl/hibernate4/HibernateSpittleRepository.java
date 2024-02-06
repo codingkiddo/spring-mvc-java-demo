@@ -16,7 +16,7 @@ import com.spring.quickstarts.model.Spittle;
 import com.spring.quickstarts.repository.SpittleRepository;
 
 
-@Repository
+//@Repository
 public class HibernateSpittleRepository implements SpittleRepository {
 
 	private SessionFactory sessionFactory;

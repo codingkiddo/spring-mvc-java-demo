@@ -12,6 +12,11 @@ public class GreetController {
 
 	
 //	@RequestMapping(method = RequestMethod.GET)
+	/*
+	 * 
+	 * This is fucking greet method
+	 * 
+	 */
 	@GetMapping("/")
     public String getInitialMessage() {
         return "greet";

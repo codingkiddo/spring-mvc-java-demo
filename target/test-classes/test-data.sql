@@ -1,0 +1,20 @@
+insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (1, 'habuma', 'password', 'Craig Walls', 'craig@habuma.com', false, 'Newbie');
+insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (2, 'mwalls', 'password', 'Michael Walls', 'mwalls@habuma.com', true, 'Newbie');
+insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (3, 'chuck', 'password', 'Chuck Wagon', 'chuck@habuma.com', false, 'Newbie');
+insert into Spitter (id, username, password, fullname, email, updateByEmail, status) values (4, 'artnames', 'password', 'Art Names', 'art@habuma.com', true, 'Newbie');
+
+insert into Spittle (id, spitter, message, postedTime) values (1, 1, 'This is a test spittle message', '2012-06-09');
+insert into Spittle (id, spitter, message, postedTime) values (2, 1, 'This is another test spittle message', '2012-06-09');
+insert into Spittle (id, spitter, message, postedTime) values (3, 1, 'This is a third test spittle message', '2012-07-04');
+insert into Spittle (id, spitter, message, postedTime) values (4, 2, 'Hello from Chuck!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (5, 4, 'Hello from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (6, 4, 'Hello again from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (7, 4, 'Hola from Arthur!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (8, 4, 'Buenos Dias from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (9, 4, 'Ni Hao from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (10, 4, 'Guten Tag from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (11, 4, 'Konnichi wa from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (12, 4, 'Buon giorno from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (13, 4, 'Bonjour from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (14, 4, 'Aloha from Art!', '2012-03-25');
+insert into Spittle (id, spitter, message, postedTime) values (15, 4, 'God dag from Art!', '2012-03-25');

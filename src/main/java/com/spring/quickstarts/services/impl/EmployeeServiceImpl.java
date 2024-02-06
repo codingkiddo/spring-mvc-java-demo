@@ -15,7 +15,7 @@ import com.spring.quickstarts.services.EmployeeService;
 //@Transactional
 public class EmployeeServiceImpl implements EmployeeService {
  
-    @Autowired
+//    @Autowired
     private EmployeeDao dao;
      
     @Transactional(readOnly = true)
