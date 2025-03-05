@@ -10,11 +10,11 @@ public class Parrot {
 
     private String name;
 
-    @PostConstruct
-    public void init() {
-    	System.out.println("init() ..Parrot");
-    	this.name = "KiWi";
-    }
+//    @PostConstruct
+//    public void init() {
+//    	System.out.println("init() ..Parrot");
+//    	this.name = "KiWi";
+//    }
     
     public String getName() {
         return name;
@@ -24,8 +24,8 @@ public class Parrot {
         this.name = name;
     }
     
-    @PreDestroy
-    public void destroy() {
-    	System.out.println("destroy() ..Parrot");
-    }
+//    @PreDestroy
+//    public void destroy() {
+//    	System.out.println("destroy() ..Parrot");
+//    }
 }
