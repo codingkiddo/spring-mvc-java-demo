@@ -3,13 +3,36 @@ package com.spring.quickstarts.ch01.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 import com.spring.quickstarts.ch01.beans.Parrot;
+import com.spring.quickstarts.ch01.beans.Person;
 
 @Configuration
-@ComponentScan(basePackages = {"com.spring.quickstarts.ch01.beans"})
+@ComponentScan(basePackages = { "com.spring.quickstarts.ch01.beans" })
 public class ProjectConfig {
+
+//	@Bean
+//	public Parrot parrot() {
+//		Parrot p = new Parrot();
+//		p.setName("KoKo");
+//		return p;
+//	}
+
+//	@Bean
+//	public Person person() {
+//		Person p = new Person();
+//		p.setName("Ella");
+//		p.setParrot(parrot());
+//		return p;
+//	}
+	
+//	@Bean
+//	public Person person(Parrot parrot) {
+//		Person p = new Person();
+//		p.setName("Ella");
+//		p.setParrot(parrot);
+//		return p;
+//	}
 
 //	@Bean
 //	public Parrot parrot1() {
@@ -32,7 +55,7 @@ public class ProjectConfig {
 //		p.setName("RiKi");
 //		return p;
 //	}
-	
+
 //	@Bean(name="koko")
 //	public Parrot parrot1() {
 //		Parrot p = new Parrot();
@@ -53,9 +76,9 @@ public class ProjectConfig {
 //		p.setName("RiKi");
 //		return p;
 //	}
-	
+
 //	expected single matching bean but found 3: parrotKoKo,parrotMiKi,parrotRiKi
-	
+
 //	@Bean
 //	public Parrot parrotKoKo() {
 //		Parrot p = new Parrot();
@@ -76,14 +99,14 @@ public class ProjectConfig {
 //		p.setName("RiKi");
 //		return p;
 //	}
-	
-	@Bean
-	public String hello() {
-		return "hello";
-	}
-	
-	@Bean
-	public Integer ten() {
-		return 10;
-	}
+
+//	@Bean
+//	public String hello() {
+//		return "hello";
+//	}
+//
+//	@Bean
+//	public Integer ten() {
+//		return 10;
+//	}
 }

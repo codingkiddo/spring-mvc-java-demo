@@ -8,7 +8,8 @@
       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
   <bean id="knight" class="sia.knights.BraveKnight">
-    <constructor-arg ref="quest" />
+    <constructor-arg  ref="quest" />
+    <constructor-arg  ref="minstrel" />
   </bean>
 
   <bean id="quest" class="sia.knights.SlayDragonQuest">
