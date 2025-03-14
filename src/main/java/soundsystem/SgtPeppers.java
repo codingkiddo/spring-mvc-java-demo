@@ -15,7 +15,7 @@ public class SgtPeppers implements CompactDisc, BeanNameAware {
 	
 	@Override
 	public void play() {
-		System.out.println( this.beanName +  " Playing " + title + " by " + artist);
+		System.out.println("Playing " + title + " by " + artist);
 	}
 
 	@Override
