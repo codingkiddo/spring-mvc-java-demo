@@ -5,11 +5,6 @@ import java.io.PrintStream;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import sia.knights.BraveKnight;
-import sia.knights.Knight;
-import sia.knights.Quest;
-import sia.knights.SlayDragonQuest;
-
 @Configuration
 public class KnightConfig {
 
