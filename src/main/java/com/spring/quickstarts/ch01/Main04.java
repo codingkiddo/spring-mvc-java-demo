@@ -13,20 +13,20 @@ public class Main04 {
 		
 		BeanFactory context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 		
-		Parrot parrot = new Parrot();
-		parrot.setName("MiKi");
-		
-		Supplier<Parrot> parrotSupplier = () -> parrot;
-		
-		AnnotationConfigApplicationContext applicationContext 
-						= (AnnotationConfigApplicationContext) context;
-		
-//		applicationContext.registerBean(Parrot.class, parrotSupplier);
-		applicationContext.registerBean("parrot1", Parrot.class, parrotSupplier);
-		
-		Parrot parrotBean = context.getBean(Parrot.class);
-		
-		System.out.println(parrotBean.getName());
+//		Parrot parrot = new Parrot();
+//		parrot.setName("MiKi");
+//		
+//		Supplier<Parrot> parrotSupplier = () -> parrot;
+//		
+//		AnnotationConfigApplicationContext applicationContext 
+//						= (AnnotationConfigApplicationContext) context;
+//		
+////		applicationContext.registerBean(Parrot.class, parrotSupplier);
+//		applicationContext.registerBean("parrot1", Parrot.class, parrotSupplier);
+//		
+//		Parrot parrotBean = context.getBean(Parrot.class);
+//		
+//		System.out.println(parrotBean.getName());
 		
 		( (AnnotationConfigApplicationContext) context ).close();
 		

@@ -14,7 +14,7 @@ public class KnightConfig {
 
   @Bean
   public Knight knight() {
-    return new BraveKnight(quest(), minstrel());
+    return new BraveKnight(quest());
   }
   
   @Bean Minstrel minstrel() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sia.knights.KnightXMLInjectionTest" time="0.172" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="soundsystem.CDPlayerTest" time="0.196" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -11,7 +11,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="user.timezone" value=""/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="user.country" value="IN"/>
@@ -62,17 +62,13 @@
     <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="shouldInjectKnightWithSlayDragonQuest" classname="sia.knights.KnightXMLInjectionTest" time="0.001">
-    <system-err><![CDATA[Mar 14, 2025 8:26:52 AM org.springframework.test.context.support.AbstractContextLoader generateDefaultLocations
-INFO: Detected default resource location "classpath:sia/knights/KnightXMLInjectionTest-context.xml" for test class [sia.knights.KnightXMLInjectionTest]
-Mar 14, 2025 8:26:52 AM org.springframework.test.context.support.AbstractDelegatingSmartContextLoader processContextConfiguration
-INFO: GenericXmlContextLoader detected default locations for context configuration [ContextConfigurationAttributes@3e08ff24 declaringClass = 'sia.knights.KnightXMLInjectionTest', classes = '{}', locations = '{classpath:sia/knights/KnightXMLInjectionTest-context.xml}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
-Mar 14, 2025 8:26:52 AM org.springframework.test.context.support.AnnotationConfigContextLoaderUtils detectDefaultConfigurationClasses
-INFO: Could not detect default configuration classes for test class [sia.knights.KnightXMLInjectionTest]: KnightXMLInjectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-Mar 14, 2025 8:26:52 AM org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+  <testcase name="cdShouldNotBeNull" classname="soundsystem.CDPlayerTest" time="0.002">
+    <system-out><![CDATA[sgtPeppers Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles
+]]></system-out>
+    <system-err><![CDATA[Mar 14, 2025 8:26:52 AM org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
 INFO: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
 Mar 14, 2025 8:26:52 AM org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
-INFO: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@70ed52de, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@496bc455, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59402b8f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7188af83, org.springframework.test.context.event.EventPublishingTestExecutionListener@6be968ce]
+INFO: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a8a8f7c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2353b3e6, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@631330c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@42f93a98, org.springframework.test.context.event.EventPublishingTestExecutionListener@c46bcd4]
 ]]></system-err>
   </testcase>
 </testsuite>
