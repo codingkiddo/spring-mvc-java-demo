@@ -1,5 +1,7 @@
 package com.spring.quickstarts.ch01;
 
+import java.util.function.Predicate;
+
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -11,6 +13,8 @@ public class Main01 {
 	public static void main(String[] args) {
 
 		BeanFactory context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+		
+//		Predicate<T>
 		
 		Parrot parrot = context.getBean(Parrot.class);
 		System.out.println(parrot.getName());
