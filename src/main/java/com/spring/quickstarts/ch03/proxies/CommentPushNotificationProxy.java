@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import com.spring.quickstarts.ch03.model.Comment;
 
 
-
 @Component
 @Primary
 @Qualifier("push")

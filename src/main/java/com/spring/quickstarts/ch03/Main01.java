@@ -1,7 +1,10 @@
 package com.spring.quickstarts.ch03;
 
+import javax.sql.DataSource;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.spring.quickstarts.ch03.configuration.DataSourceConfig;
 import com.spring.quickstarts.ch03.configuration.ProjectConfiguration;
 import com.spring.quickstarts.ch03.model.Comment;
 import com.spring.quickstarts.ch03.services.CommentService;
@@ -11,7 +14,12 @@ public class Main01 {
 	public static void main(String[] args) {
 
 		AnnotationConfigApplicationContext context = 
-				new AnnotationConfigApplicationContext(ProjectConfiguration.class);
+				new AnnotationConfigApplicationContext();
+		
+		context.getEnvironment().setActiveProfiles("prod");
+		
+		context.register(ProjectConfiguration.class, DataSourceConfig.class);
+		context.refresh();
 		
 		Comment comment = new Comment();
 		comment.setAuthor("Laurentiu");
@@ -19,6 +27,9 @@ public class Main01 {
 		
 		CommentService commentService = context.getBean(CommentService.class);
 		commentService.publishComment(comment);
+		
+		DataSource dataSource = context.getBean(DataSource.class);
+		System.out.println(dataSource.toString());
 		
 		context.close();
 		
