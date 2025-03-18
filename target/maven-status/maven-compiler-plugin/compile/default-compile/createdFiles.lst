@@ -33,3 +33,4 @@ sia/knights/Knight.class
 com/spring/quickstarts/ch01/beans/Parrot.class
 sia/knights/RescueDamselQuest.class
 com/spring/quickstarts/ch01/Main05.class
+com/spring/quickstarts/ch03/configuration/DataSourceConfig.class

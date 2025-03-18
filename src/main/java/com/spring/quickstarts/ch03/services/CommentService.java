@@ -2,11 +2,13 @@ package com.spring.quickstarts.ch03.services;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.spring.quickstarts.ch03.model.Comment;
 import com.spring.quickstarts.ch03.proxies.CommentNotificationProxy;
 import com.spring.quickstarts.ch03.repositories.CommentRepository;
 
+@Service
 @Component
 public class CommentService {
 
