@@ -1,4 +1,4 @@
-package com.spring.quickstarts.ch03.configuration;
+package com.spring.quickstarts.ch03.profiles;
 
 import javax.sql.DataSource;
 
@@ -15,7 +15,10 @@ public class DataSourceConfig {
 	@Bean(destroyMethod = "shutdown")
 	@Profile("dev")
 	public DataSource dataSourceEmbedded() {
-		return new EmbeddedDatabaseBuilder().addScript("classpath:db/schema.sql").build();
+		return new EmbeddedDatabaseBuilder()
+				.addScript("classpath:db/schema.sql")
+				.addScript("classpath:db/test-data.sql")
+				.build();
 	}
 	
 	@Bean

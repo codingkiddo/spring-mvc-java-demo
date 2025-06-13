@@ -4,9 +4,9 @@ import javax.sql.DataSource;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.spring.quickstarts.ch03.configuration.DataSourceConfig;
 import com.spring.quickstarts.ch03.configuration.ProjectConfiguration;
 import com.spring.quickstarts.ch03.model.Comment;
+import com.spring.quickstarts.ch03.profiles.DataSourceConfig;
 import com.spring.quickstarts.ch03.services.CommentService;
 
 public class Main01 {
